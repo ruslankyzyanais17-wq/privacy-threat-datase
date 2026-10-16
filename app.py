@@ -51,7 +51,7 @@ with st.sidebar:
     st.markdown("### 🔄 Автожаңарту / Автообновление")
     if st.button("⚡ Деректерді жаңарту (Автопоиск и парсинг)", use_container_width=True):
         with st.spinner("Дереккөздер тексерілуде / Опрос источников..."):
-            st.success("✅ Деректер жаңартылды! 48 жазба анонимизацияланған.")
+            st.success(f"✅ Деректер жаңартылды! {len(df):,} жазба анонимизацияланған.")
     
     st.markdown("---")
     st.markdown("### 🔍 Сүзгілер / Фильтры")
@@ -163,6 +163,8 @@ display_cols = [c for c in [
     "фрагмент_ИМЯ", "фрагмент_ТЕЛЕФОН", "фрагмент_АДРЕС",
     "фрагмент_EMAIL", "фрагмент_АККАУНТ", "фрагмент_ГЕОЛОКАЦИЯ"
 ] if c in filtered_df.columns]
+
+st.caption(f"Отображено записей: {len(filtered_df):,} из {len(df):,}")
 
 st.dataframe(
     filtered_df[display_cols],

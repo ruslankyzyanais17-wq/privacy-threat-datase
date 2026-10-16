@@ -15,8 +15,8 @@ privacy_threat_streamlit/
 ├── .gitignore              # Исключения для Git
 ├── README.md               # Документация и инструкция
 └── data/
-    ├── dataset.csv         # Полный датасет (48 записей, 9 классов, токены PII)
-    └── dataset.jsonl       # Датасет в формате JSONL (для NLP / LLM)
+    ├── dataset.csv         # Полный датасет (13 500 записей, 9 классов по 1 500 строк, токены PII)
+    └── dataset.jsonl       # Датасет в формате JSONL (13 500 строк для NLP / LLM)
 ```
 
 ---
